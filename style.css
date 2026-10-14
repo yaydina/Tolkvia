@@ -1,0 +1,55 @@
+:root {
+  --bg: #f4f5fa;
+  --surface: #ffffff;
+  --text: #0d1326;
+  --muted: #434e68;
+  --border: #dce1ee;
+  --primary: #2747d9;
+  --g1: #18225f;
+  --g2: #3a57f2;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #070a15;
+    --surface: #121930;
+    --text: #f2f5fc;
+    --muted: #b7c0da;
+    --border: #28335a;
+    --primary: #8098ff;
+  }
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font: 16px/1.65 Inter, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+.hero {
+  background: linear-gradient(135deg, var(--g1), var(--g2));
+  color: #fff;
+  padding: 28px 16px 36px;
+}
+.wrap { max-width: 760px; margin: 0 auto; padding: 0 16px; }
+.hero .wrap { padding: 0; }
+.brand { display: flex; align-items: center; gap: 12px; text-decoration: none; color: #fff; font-weight: 800; font-size: 22px; }
+.brand img { width: 40px; height: 40px; border-radius: 12px; }
+.brand span { color: #7beadc; }
+.hero h1 { font-size: 30px; line-height: 1.2; margin: 24px 0 6px; }
+.hero p { margin: 0; opacity: .85; }
+.lang { margin-top: 16px; display: flex; gap: 8px; flex-wrap: wrap; }
+.lang a { color: #fff; border: 1px solid rgba(255,255,255,.4); border-radius: 999px; padding: 4px 14px; text-decoration: none; font-size: 14px; }
+.lang a[aria-current] { background: rgba(255,255,255,.18); }
+main.wrap { padding-top: 24px; padding-bottom: 48px; }
+.card { background: var(--surface); border: 1px solid var(--border); border-radius: 20px; padding: 20px 22px; margin-bottom: 16px; }
+h2 { font-size: 20px; margin: 0 0 8px; }
+p, li { color: var(--muted); }
+a { color: var(--primary); }
+table { width: 100%; border-collapse: collapse; font-size: 14px; }
+th, td { text-align: left; padding: 8px 6px; border-bottom: 1px solid var(--border); vertical-align: top; color: var(--muted); }
+th { color: var(--text); }
+.table { overflow-x: auto; }
+.grid { display: grid; gap: 12px; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
+.grid a { display: block; text-decoration: none; background: var(--surface); border: 1px solid var(--border); border-radius: 20px; padding: 18px; color: var(--text); font-weight: 600; }
+.grid a small { display: block; color: var(--muted); font-weight: 400; margin-top: 4px; }
+footer { text-align: center; font-size: 14px; color: var(--muted); padding: 0 16px 32px; }
